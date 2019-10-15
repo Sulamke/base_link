@@ -67,7 +67,7 @@
 	</collision>
 </link>
 
-
+<xacro:macro name="xacro_right" params= "suffix reflect">
 <link name="wheel_right">
 	<visual>
 		<geometry>
@@ -80,9 +80,10 @@
 	</geometry>
 	</collision>
 </link>
+</xacro:macro>
+<xacro:xacro_right suffix="right" reflect="-1"/>
 
-<xacro:macro name="xacro_name" params= "suffix reflect">
-
+<xacro:macro name="xacro_left" params= "suffix reflect">
 <link name="wheel_left">
 	<visual>
 		<geometry>
@@ -98,7 +99,7 @@
 </link>
 
 </xacro:macro>
-<xacro:xacro_name suffix="left" reflect="1"/>
+<xacro:xacro_left suffix="left" reflect="1"/>
 <link name="wheel_center">
 	<visual>
 		<geometry>
@@ -137,21 +138,23 @@
 </joint>
 
 
+<xacro:macro name="xacro_name" params= "suffix reflect">
 <joint name="base_wheel_right_joint" type="fixed">
 	<origin xyz="-0.10 -0.4 0" rpy="-1.57 0 0"/>
 	<parent link="base"/>
 	<child link="wheel_right"/>
 </joint>
+</xacro:macro>
+<xacro:xacro_name suffix="right" reflect="-1"/>
 
-<xacro:macro name="xacro_left" params= "suffix reflect">
-
+<xacro:macro name="xacro_left2" params= "suffix reflect">
 <joint name="base_wheel_left_joint" type="fixed">
 	<origin xyz="-0.10 0.4 0" rpy="-1.57 0 0"/>
 	<parent link="base"/>
 	<child link="wheel_left"/>
 </joint>
 </xacro:macro>
-<xacro:xacro_left suffix="left" reflect="1"/>
+<xacro:xacro_left2 suffix="left" reflect="1"/>
 
 <joint name="base_wheel_center_joint" type="fixed">
 	<origin xyz="0.10 0 0" rpy="-1.57 0 0"/>
