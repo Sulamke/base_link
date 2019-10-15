@@ -1,13 +1,13 @@
 <robot name="robot">
  <link name="base">
 	<visual>
-		<origin xyz="-.47 0 .99" rpy="0 0 0"/>
+		<origin xyz=".47 .39 .99" rpy="0 0 0"/>
 		<geometry>
 		<box size= ".94 .78 1.98"/>
 		</geometry>
    	</visual>
 	<collision>
-	<origin xyz="-.47 0 .99" rpy="0 0 0"/>
+	<origin xyz=".47 .39 .99" rpy="0 0 0"/>
 	<geometry>
 	<cylinder radius="1" length="0.5"/>
 	</geometry>
