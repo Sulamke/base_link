@@ -3,7 +3,7 @@
 <arg name="use_xacro" default="false" />
 <!-- What is the name of the file to use? This can be passed into the launch file.
 -->
-<arg if="($arg use_xacro)" name="filename" default="<filename>.xacro" />
+<arg if="($arg use_xacro)" name="urdf" default="urdf.xacro" />
 <arg unless="($arg use_xacro)" name="filename" default="<filename>.urdf" />
 <!-- The full path of the URDF file can be passed into the launch file instead.
 -->

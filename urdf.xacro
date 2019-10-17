@@ -139,8 +139,8 @@
 
 
 <xacro:macro name="xacro_name" params= "suffix reflect">
-<joint name="base_wheel_right_joint" type="fixed">
-	<origin xyz="-0.10 -0.4 0" rpy="-1.57 0 0"/>
+<joint name="base_wheel_right_joint" type="continuous">
+	<origin xyz="-0.10 ${reflect * 0.4} 0" rpy="-1.57 0 0"/>
 	<parent link="base"/>
 	<child link="wheel_right"/>
 </joint>
@@ -148,7 +148,7 @@
 <xacro:xacro_name suffix="right" reflect="-1"/>
 
 <xacro:macro name="xacro_left2" params= "suffix reflect">
-<joint name="base_wheel_left_joint" type="fixed">
+<joint name="base_wheel_left_joint" type="continuous">
 	<origin xyz="-0.10 0.4 0" rpy="-1.57 0 0"/>
 	<parent link="base"/>
 	<child link="wheel_left"/>
@@ -156,7 +156,7 @@
 </xacro:macro>
 <xacro:xacro_left2 suffix="left" reflect="1"/>
 
-<joint name="base_wheel_center_joint" type="fixed">
+<joint name="base_wheel_center_joint" type="continuous">
 	<origin xyz="0.10 0 0" rpy="-1.57 0 0"/>
 	<parent link="base"/>
 	<child link="wheel_center"/>
