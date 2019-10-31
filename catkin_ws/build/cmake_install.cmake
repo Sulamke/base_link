@@ -117,6 +117,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/kts34/Lab_5/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/kts34/Lab_5/catkin_ws/build/urdf_pkg/cmake_install.cmake")
 
 endif()
 
