@@ -3,8 +3,8 @@
 <arg name="use_xacro" default="false" />
 <!-- What is the name of the file to use? This can be passed into the launch file.
 -->
-<arg if="($arg use_xacro)" name="urdf" default="urdf.xacro" />
-<arg unless="($arg use_xacro)" name="filename" default="<filename>.urdf" />
+<arg if="($arg use_xacro)" name="urdf" default="base_link.xacro" />
+<arg unless="($arg use_xacro)" name="filename" default="<urdf_from_xacro.urdf" />
 <!-- The full path of the URDF file can be passed into the launch file instead.
 -->
 <arg name="file" default="$(find my_robot_description)/urdf/$(arg filename)" />
