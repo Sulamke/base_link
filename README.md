@@ -1,5 +1,5 @@
-# URDF Robot
-This is a URDF robot. The wheels aren't in the correct place for some reason. I put in the correct placements and orientations, but they still appear center. 
-Using the launch file everything should run.
+Use the launch file located in the urdf_pkg
+In the RVIZ set the configuration to Target Frame if you want to see how the viewer operates
+Included in the package is the map data for the 5th floor of Glennan
+Using the same robot from the previous assignment, we can use the sensory data to view the map from its perspective
 
-Use the same launch file from the last lab to launch the previous xacro file
